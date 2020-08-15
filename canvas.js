@@ -1,8 +1,8 @@
 var canvas = document.querySelector("canvas");
 var c = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
 window.addEventListener("resize", function() {
   canvas.width = window.innerWidth;
@@ -86,10 +86,10 @@ function init() {
 function animate() {
 
   if (Math.floor(Math.random() * 30) == 0) {
-    fireworks.push(new Particle(Math.random() * innerWidth, innerHeight + 100, fireworkRadius, Math.random() * 6 + 12, 0, "white"));
+    fireworks.push(new Particle(Math.random() * canvas.width, canvas.height + 100, fireworkRadius, Math.random() * 6 + 12, 0, "white"));
   }
 
-  c.clearRect(0, 0, innerWidth, innerHeight);
+  c.clearRect(0, 0, canvas.width, canvas.height);
 
   for (i = 0; i < fireworks.length; i++) {
     fireworks[i].update();

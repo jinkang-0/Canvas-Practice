@@ -32,6 +32,19 @@ window.addEventListener("mousedown", function() {
   cannon.fire();
 })
 
+window.addEventListener("touchstart", function() {
+  
+  mouseX = event.touches[0].clientX - 50;
+  mouseY = innerHeight - event.touches[0].clientY - 50;
+  let angle = -Math.atan( mouseY / mouseX );
+  if (angle >= minAngle && angle < 0) {
+    cannon.angle = angle;
+  }
+  
+  document.getElementById("desc").style.display = "none";
+  cannon.fire();
+})
+
 window.addEventListener("resize", function() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;

@@ -25,6 +25,11 @@ window.addEventListener("mousemove", function() {
   mouseY = event.clientY;
 })
 
+window.addEventListener("touchmove", function() {
+  mouseX = event.touches[0].clientX;
+  mouseY = event.touches[0].clientY;
+})
+
 window.addEventListener("resize", function() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -33,6 +38,10 @@ window.addEventListener("resize", function() {
 })
 
 window.addEventListener("mousedown", function() {
+  document.getElementById("desc").style.display = "none";
+})
+
+window.addEventListener("touchstart", function() {
   document.getElementById("desc").style.display = "none";
 })
 
