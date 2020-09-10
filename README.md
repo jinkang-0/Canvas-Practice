@@ -1,5 +1,11 @@
-# Canvas Practice
-An experiemental playground for my canvas practices.
+# Simulations
+A place to put my html canvas doodles that simulates something.
+
+### Note to self
+Things to add:
+- Cannon
+- CIRCLES
+- Galaxy
 
 ### Demo
-https://jinkang-0.github.io/Canvas-Practice/
+https://jinkang-0.github.io/Simulation/

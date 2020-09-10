@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulations | Fireworks</title>
+
+  <link rel="stylesheet" href="../css/fireworks.css">
+  <script src="https://kit.fontawesome.com/bf5b084248.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  
+  <nav>
+    <i class="fas fa-angle-double-left disabled"></i>
+    <h1>Fireworks</h1>
+    <a href="pendulum.html"><i class="fas fa-angle-double-right clickable"></i></a>
+    
+    <div class="back">
+      <a href="../">
+        <i class="fas fa-arrow-left"></i>
+        <h3>Back</h3>
+      </a>
+    </div>
+
+    <input type="checkbox" class="dropdown-check">
+    <i class="fas fa-caret-down clickable dropdown-icon"></i>
+    <div class="dropdown">
+      
+      <!-- simulation settings -->
+
+      <h4 onclick="changeTab('sim-tab', 'color-tab')" id="sim-tab">Simulation</h4>
+      <h4 onclick="changeTab('color-tab', 'sim-tab')" id="color-tab" class="unselected">Colors</h4>
+
+      <div id="sim-settings" class="settings shown">
+
+        <span>Radius: </span>
+        <span id="radius">5</span>
+        <input oninput="updateVals('radius', this.value)" type="range" id="rSlider" class="slider" min="2" max="15" value="5">
+
+        <span># of Fireworks: </span>
+        <span id="len_fireworks">5</span>
+        <input oninput="updateVals('len_fireworks', this.value)" type="range" id="fireworkSlider" class="slider" min="2" max="15" value="5">
+
+        <span># of Sparks: </span>
+        <span id="len_sparks">20</span>
+        <input oninput="updateVals('len_sparks', this.value)" type="range" id="sparkSlider" class="slider" min="10" max="50" value="20">
+
+        <span>Gravity: </span>
+        <span id="gravity">0.15</span>
+        <input oninput="updateVals('gravity', this.value)" type="range" id="gravSlider" class="slider" min="1" max="50" value="15">
+
+      </div>
+
+      <div id="color-settings" class="settings hidden">
+
+        <span>Max Red: </span>
+        <span id="maxR">248</span>
+        <input oninput="updateMaxRGB(this.value, max_g, max_b)" type="range" id="maxR" class="slider" min="0" max="255" value="248">
+
+        <span>Min Red: </span>
+        <span id="minR">217</span>
+        <input oninput="updateMinRGB(this.value, min_g, min_b)" type="range" id="minR" class="slider" min="0" max="255" value="217">
+
+        <span>Max Green: </span>
+        <span id="maxG">165</span>
+        <input oninput="updateMaxRGB(max_r, this.value, max_b)" type="range" id="maxG" class="slider" min="0" max="255" value="165">
+
+        <span>Min Green: </span>
+        <span id="minG">34</span>
+        <input oninput="updateMinRGB(min_r, this.value, min_b)" type="range" id="minG" class="slider" min="0" max="255" value="34">
+
+        <span>Max Blue: </span>
+        <span id="maxB">12</span>
+        <input oninput="updateMaxRGB(max_r, max_g, this.value)" type="range" id="maxB" class="slider" min="0" max="255" value="12">
+
+        <span>Min Blue: </span>
+        <span id="minB">0</span>
+        <input oninput="updateMinRGB(min_r, min_g, this.value)" type="range" id="minB" class="slider" min="0" max="255" value="0">
+
+      </div>
+
+    </div>
+  </nav>
+
+  <canvas></canvas>
+
+  <script src="../scripts/fireworks.js"></script>
+
+</body>
+</html>
