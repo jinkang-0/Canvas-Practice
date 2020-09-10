@@ -8,4 +8,4 @@ Things to add:
 - Galaxy
 
 ### Demo
-https://jinkang-0.github.io/Simulation/
+https://jinkang-0.github.io/Simulations/
