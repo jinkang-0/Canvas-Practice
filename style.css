@@ -11,7 +11,6 @@ body {
   background-color: darkslategray;
   color: white;
   font-family: Ubuntu, sans-serif;
-  overflow: hidden;
 }
 
 /* header */
@@ -31,11 +30,12 @@ header {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 60px 0 60px 40px;
 }
 
 .card {
-  width: 90%;
+  width: 80%;
+  padding-left: 10%;
+  margin: 50px 0 30px 0;
 }
 
 .card h4 {
@@ -55,4 +55,11 @@ header {
 
 .card h1 {
   margin-top: 20px;
+}
+
+/* media queries */
+@media (max-width: 750px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
 }
