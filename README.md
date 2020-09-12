@@ -1,11 +1,10 @@
-# Simulations
-A place to put my html canvas doodles that simulates something.
+# Canvas Practice
+A place to put my html canvas doodles.
 
 ### Note to self
 Things to add:
-- Cannon
-- CIRCLES
 - Galaxy
+- Recursions
 
 ### Demo
-https://jinkang-0.github.io/Simulations/
+https://jinkang-0.github.io/Canvas-Practice/
