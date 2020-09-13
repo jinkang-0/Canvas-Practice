@@ -86,10 +86,12 @@ function drawCircle(x, y, radius) {
 }
 
 // fire cannonballs
-window.addEventListener('mouseup', () => {
+window.addEventListener('mouseup', (event) => {
   let x = CANNON_LENGTH * Math.cos(rad);
   let y = CANNON_LENGTH * Math.sin(rad);
-  cannonballs.push( new Firework(0, 0, ballRadius, x/5, y/5) );
+  if (event.clientY > 60) {
+    cannonballs.push( new Firework(0, 0, ballRadius, x/5, y/5) );
+  }
 });
 
 //

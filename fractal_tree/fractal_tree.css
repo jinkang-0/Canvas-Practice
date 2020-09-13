@@ -6,12 +6,11 @@
 
 :root {
   --dropdown-color: #004040;
-  --inner-dropdown: #005555;
   --slider-thumb: lightgray;
 }
 
 body {
-  background-color: #0A0A0A;
+  background-color: #0ca76b;
   color: white;
   font-family: Ubuntu, sans-serif;
   overflow: hidden;
@@ -100,14 +99,16 @@ nav * {
 /* dropdown options */
 .dropdown {
   display: none;
+  background-color: var(--dropdown-color);
   position: absolute;
   top: 70px;
   right: 20px;
-  background-color: var(--dropdown-color);
   width: 200px;
-  height: 280px;
-  padding-top: 15px;
+  height: 240px;
+
+  padding-top: 10px;
   border-radius: 7px;
+  
   z-index: 100;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -161,37 +162,8 @@ nav * {
   display: inline-block;
   background-color: var(--inner-dropdown);
   padding: 2px 12px 2px 5px;
-  margin: 0;
-  margin-right: 10px;
+  margin: 0 0 10px 5px;
   clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
-}
-
-.unselected {
-  filter: brightness(0.8);
-  color: darkgray;
-  cursor: pointer;
-}
-
-.shown {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.settings {
-  background-color: var(--inner-dropdown);
-  width: 100%;
-  margin: 0;
-  padding: 10px 0;
-  height: 260px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-#color-settings {
-  height: 390px;
 }
 
 /* sliders */

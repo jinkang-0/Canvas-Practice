@@ -133,6 +133,15 @@ function addFirework() {
   fireworks.push( new Firework(x, canvas.height, v) );
 }
 
+// click to launch a firework
+window.addEventListener('mouseup', (event) => {
+  if (fireworks.length < len_fireworks*2) {
+    let x = event.clientX;
+    let v = (Math.random() * -10) - 5;
+    fireworks.push( new Firework(x, canvas.height, v) );
+  }
+});
+
 //
 // changing settings & html
 //

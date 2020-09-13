@@ -8,6 +8,8 @@ let colors = [
   "#7CC6FE",
   "#171738"
 ];
+let mouseX;
+let mouseY;
 
 // setup canvas
 var canvas = document.querySelector('canvas');
@@ -24,6 +26,15 @@ function animate() {
   for (var i = 0; i < circles.length; i++) {
     circles[i].update();
     circles[i].show();
+
+    if (
+      circles[i].x >= mouseX - range && circles[i].x <= mouseX + range
+      && circles[i].y >= mouseY - range && circles[i].y <= mouseY + range
+    ) {
+      circles[i].velX += (circles[i].x - mouseX) / 500;
+      circles[i].velY += (circles[i].y - mouseY) / 500;
+    }
+
   }
 
   requestAnimationFrame(animate);
@@ -106,15 +117,6 @@ window.addEventListener('resize', () => {
 })
 
 window.addEventListener('mousemove', (event) => {
-  let mouseX = event.clientX;
-  let mouseY = event.clientY - 60;
-  for (var i = 0; i < circles.length; i++) {
-    if (
-      circles[i].x >= mouseX - range && circles[i].x <= mouseX + range
-      && circles[i].y >= mouseY - range && circles[i].y <= mouseY + range
-    ) {
-      circles[i].velX += (circles[i].x - mouseX) / 500;
-      circles[i].velY += (circles[i].y - mouseY) / 500;
-    }
-  }
+  mouseX = event.clientX;
+  mouseY = event.clientY - 60;
 })

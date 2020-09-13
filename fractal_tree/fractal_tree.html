@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="../assets/canvas.png" type="image/x-icon">
+  <title>Canvas | Fractal Tree</title>
+
+  <link rel="stylesheet" href="fractal_tree.css">
+  <script src="https://kit.fontawesome.com/bf5b084248.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  
+  <nav>
+    <a href="../circles/circles.html"><i class="fas fa-angle-double-left clickable"></i></a>
+    <h1>Fractal Tree</h1>
+    <a href="../galaxy/galaxy.html"><i class="fas fa-angle-double-right clickable"></i></a>
+    
+    <div class="back">
+      <a href="..">
+        <i class="fas fa-arrow-left"></i>
+        <h3>Back</h3>
+      </a>
+    </div>
+
+    <input type="checkbox" class="dropdown-check">
+    <i class="fas fa-caret-down dropdown-icon"></i>
+    <div class="dropdown">
+      <h4>Generation Settings</h4>
+
+      <span>Length:</span>
+      <span id="length">200</span>
+      <input oninput="updateVals('length', this.value)" type="range" class="slider" min="50" max="300" value="200">
+
+      <span>Trimming:</span>
+      <span id="trim">1.5</span>
+      <input oninput="updateVals('trim', this.value)" type="range" class="slider" min="30" max="100" value="50">
+
+      <span>Angle:</span>
+      <span id="angle">30</span>
+      <input oninput="updateVals('angle', this.value)" type="range" class="slider" min="1" max="179" value="30">
+      
+    </div>
+  </nav>
+
+  <canvas></canvas>
+
+  <script src="fractal_tree.js"></script>
+
+</body>
+</html>
