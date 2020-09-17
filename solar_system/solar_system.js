@@ -74,27 +74,36 @@ for (var i = 0; i < starCount; i++) {
 
 // declare planets
 var mercury = new Planet(0, 40, 2, 0.047, 'darkgray');
+
 var venus = new Planet(0, 60, 5, 0.035, 'white');
-var earth = new Planet(0, 100, 5.5, 0.029, 'lightblue', [ new Moon(0, 15, 2, 0.001) ]);
+
+var earth = new Planet(0, 100, 5.5, 0.029, 'lightblue', [ 
+  new Moon(0, 15, 2, 0.1) // the moon.
+]);
+
 var mars = new Planet(0, 145, 4, 0.024, 'red', [
-  new Moon(0, 8, 1, 0.002),
-  new Moon(2, 12, 1.2, 0.006)
+  new Moon(0, 8, 1, 0.02), // phobos
+  new Moon(2, 12, 1.2, 0.06) // deimos
 ]);
-var jupiter = new Planet(0, 200, 10, 0.013, 'orangered', [
-  new Moon(0, 15, 1.3, 0.017), //io
-  new Moon(Math.PI/6, 20, 1, 0.014), //europa
-  new Moon(2*Math.PI/3, 25, 2, 0.011), //ganymede
-  new Moon(3*Math.PI/2, 27, 1.7, 0.008) //callisto
+
+var jupiter = new Planet(0, 190, 10, 0.013, 'orangered', [
+  new Moon(0, 15, 1.3, 0.17), //io
+  new Moon(Math.PI/6, 20, 1, 0.14), //europa
+  new Moon(2*Math.PI/3, 25, 2, 0.11), //ganymede
+  new Moon(3*Math.PI/2, 27, 1.7, 0.08) //callisto
 ]);
-var saturn = new Planet(0, 250, 9, 0.0097, 'palegoldenrod', [
-  new Moon(0, 15, 2.3, 0.0055)
+
+var saturn = new Planet(0, 240, 9, 0.0097, 'palegoldenrod', [
+  new Moon(0, 15, 2.3, 0.055)
 ]);
+
 var uranus = new Planet(0, 280, 7, 0.0068, 'aqua', [
-  new Moon(0, 15, 1.6, 0.003),
-  new Moon(0, 21, 1.5, 0.0036)
+  new Moon(0, 15, 1.6, 0.03), // oberon
+  new Moon(0, 21, 1.5, 0.036) // titania
 ]);
+
 var neptune = new Planet(0, 320, 6.8, 0.0055, 'purple', [
-  new Moon(0, 15, 1.4, 0.004)
+  new Moon(0, 15, 1.4, 0.04) // triton
 ]);
 
 // 
