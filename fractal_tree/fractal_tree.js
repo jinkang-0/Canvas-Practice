@@ -8,7 +8,6 @@ canvas.height = window.innerHeight - 60;
 window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight - 60;
-  draw();
 });
 
 // declare variables
@@ -51,8 +50,6 @@ function branch(len) {
 
 }
 
-draw();
-
 //
 // tools
 //
@@ -70,13 +67,15 @@ function updateVals(type, value) {
 
   if (type == 'length') {
     length = value;
-  } else if (type == 'trim') {
-    let val = value/100 + 1;
-    trim = Math.round(val*100)/100;
-    document.getElementById(type).innerHTML = trim;
   } else if (type == 'angle') {
     angle = value * Math.PI / 180;
   }
 
   draw();
+}
+
+function updateTrim(value) {
+  let val = (value/100) + 1;
+  trim = Math.round(val*100)/100;
+  document.getElementById("trim").innerHTML = trim;
 }

@@ -25,7 +25,7 @@
       </a>
     </div>
 
-    <input type="checkbox" class="dropdown-check">
+    <input type="checkbox" class="dropdown-check" checked="true">
     <i class="fas fa-caret-down dropdown-icon"></i>
     <div class="dropdown">
       <h4>Generation Settings</h4>
@@ -34,14 +34,15 @@
       <span id="length">200</span>
       <input oninput="updateVals('length', this.value)" type="range" class="slider" min="50" max="300" value="200">
 
-      <span>Trimming:</span>
-      <span id="trim">1.5</span>
-      <input oninput="updateVals('trim', this.value)" type="range" class="slider" min="30" max="100" value="50">
-
       <span>Angle:</span>
       <span id="angle">30</span>
       <input oninput="updateVals('angle', this.value)" type="range" class="slider" min="1" max="179" value="30">
       
+      <span>Trimming:</span>
+      <span id="trim">1.5</span>
+      <input oninput="updateTrim(this.value)" type="range" class="slider" min="30" max="100" value="50">
+      
+      <input onclick="draw()" type="button" value="Generate">
     </div>
   </nav>
 
