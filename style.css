@@ -24,6 +24,15 @@ header {
   align-items: center;
 }
 
+/* warning/disclaimer */
+.warning {
+  background-color: peru;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 2px 0 2px 0;
+}
+
 /* contents */
 
 .content {

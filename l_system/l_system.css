@@ -9,6 +9,7 @@
   --inner-dropdown: #005757;
   --slider-thumb: lightgray;
   --button: #006b6b;
+  --info: #076868;
 }
 
 body {
@@ -31,6 +32,7 @@ canvas {
 }
 
 a {
+  color: inherit;
   outline: none;
 }
 
@@ -200,7 +202,7 @@ nav * {
 }
 
 #custom-settings.shown {
-  height: 360px;
+  height: 370px;
 }
 
 #custom-settings div {
@@ -293,18 +295,65 @@ input[type="text"] {
   transition: 100ms;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="text"]:hover {
   background-color: darkgray;
 }
 
 #axiomText {  
   position: absolute;
   left: 70px;
-  top: 135px;
+  top: 160px;
   width: 15%;
   opacity: 0;
+  z-index: -1;
 }
 
 #axiomText:focus {
+  opacity: 1;
+  z-index: 100;
+}
+
+/* guide */
+#guideIcon {
+  font-size: 1rem;
+  color: lightgray;
+  transition: 100ms;
+  margin-bottom: 5px;
+  padding: 0;
+  height: 20px;
+}
+
+#guideIcon:hover {
+  color: white;
+}
+
+/* info box */
+#guideIcon + div {
+  opacity: 0;
+  height: 280px;
+  width: 200px;
+  padding: 10px 5px;
+  border-radius: 20px;
+  background-color: var(--dropdown-color);
+  transition: 100ms;
+  position: absolute;
+  top: -20px;
+  left: -230px;
+  font-size: 0.8rem;
+  display: block;
+}
+
+#guideIcon + div:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: var(--dropdown-color);
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+#guideIcon:hover + div {
   opacity: 1;
 }

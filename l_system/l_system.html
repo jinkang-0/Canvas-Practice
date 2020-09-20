@@ -56,6 +56,25 @@
         <span id="lengthText">Length: 70</span>
         <input oninput="sliderUpdate('length', this.value)" id="lengthSlider" type="range" class="slider" min="10" max="300" value="70">
         
+        <!-- explanation -->
+        <i id="guideIcon" class="fas fa-question-circle"></i>
+        <div>
+          <p>The L-System uses turtle graphics to draw shapes by interpreting characters in a string.</p>
+          <br>
+          <p>Axiom is the starting letter, and the string is transformed by the rules every iteration.</p>
+          <br>
+          <b>Symbol keys:</b>
+          <p>
+            + means "turn left" <br>
+            - means "turn right" <br>
+            F, A, B, G are "move forward" <br>
+            [ means "save current state" <br>
+            ] means "restore previous state" <br>
+          </p>
+        </div>
+
+        <br>
+
         <!-- axiom -->
         <span>Axiom: </span>
         <label id="axiomLabel" for="axiomText">F</label>
