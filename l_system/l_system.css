@@ -305,10 +305,13 @@ input[type="text"]:focus, input[type="text"]:hover {
   background-color: darkgray;
 }
 
+#axiomLabel {
+  position: absolute;
+}
+
 #axiomText {  
   position: absolute;
-  left: 70px;
-  top: 160px;
+  transform: translate(-3px, -4px);
   width: 15%;
   opacity: 0;
   z-index: -1;
@@ -336,15 +339,14 @@ input[type="text"]:focus, input[type="text"]:hover {
 /* info box */
 #guideIcon + div {
   opacity: 0;
-  height: 280px;
   width: 200px;
   padding: 10px 5px;
   border-radius: 20px;
   background-color: var(--dropdown-color);
   transition: 100ms;
   position: absolute;
-  top: -20px;
-  left: -230px;
+  top: -5%;
+  left: -120%;
   font-size: 0.8rem;
   display: block;
 }
